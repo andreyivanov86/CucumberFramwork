@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="0">
+<testcase classname="Submit user info usin Contact Us form" name="Submit valid user info via Contact Us fomr" time="0">
+<skipped><![CDATA[Given User access webdriveruniversity Contact us form.......................undefined
+When User enters valid user name............................................undefined
+And User enters valid last name.............................................undefined
+And User enters valid email address.........................................undefined
+And User enters comments....................................................undefined
+When User clicks on Sumbit button...........................................undefined
+Then the information should successfully be submited........................undefined
+]]></skipped>
+</testcase>
+</testsuite>
