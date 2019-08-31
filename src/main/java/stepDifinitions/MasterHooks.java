@@ -33,7 +33,7 @@ public class MasterHooks extends DriverFactory {
 			//Check if driver is null. If so tear down and make driver null
 			if (driver != null) {
 				driver.manage().deleteAllCookies();
-//				driver.close();
+				driver.close();
 				driver.quit();
 				driver = null;
 			}

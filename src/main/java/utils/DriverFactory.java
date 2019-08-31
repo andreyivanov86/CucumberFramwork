@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import pageObjects.BasePage;
 import pageObjects.ContactUs_Page;
+import pageObjects.Login_Page;
 import pageObjects.Products_Page;
 
 public class DriverFactory {
@@ -21,6 +22,7 @@ public class DriverFactory {
 	public static BasePage basePage;
 	public static ContactUs_Page contactusPage;
 	public static Products_Page productsPage;
+	public static Login_Page loginPage;
 
 	public WebDriver getDriver() {
 		
@@ -69,6 +71,7 @@ public class DriverFactory {
 			contactusPage = PageFactory.initElements(driver, ContactUs_Page.class);
 			productsPage = PageFactory.initElements(driver, Products_Page.class);
 			basePage = PageFactory.initElements(driver, BasePage.class);
+			loginPage = PageFactory.initElements(driver, Login_Page.class);
 		}
 		return driver;
 	

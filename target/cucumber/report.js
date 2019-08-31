@@ -1,4 +1,310 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("contactUs.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Login.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Login to account",
+  "description": "",
+  "id": "login-to-account",
+  "keyword": "Feature"
+});
+formatter.scenarioOutline({
+  "line": 3,
+  "name": "Login to account using valid  and invalid credentials",
+  "description": "",
+  "id": "login-to-account;login-to-account-using-valid--and-invalid-credentials",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 4,
+  "name": "User navigates to \"\u003curl\u003e\" login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 5,
+  "name": "User type \"\u003cusername\u003e\" username",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 6,
+  "name": "User type \"\u003cpassword\u003e\" password",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 7,
+  "name": "User clicks on Login Button",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "User should be presented with \"\u003cmessage\u003e\" message",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 9,
+  "name": "",
+  "description": "",
+  "id": "login-to-account;login-to-account-using-valid--and-invalid-credentials;",
+  "rows": [
+    {
+      "cells": [
+        "url",
+        "username",
+        "password",
+        "message"
+      ],
+      "line": 10,
+      "id": "login-to-account;login-to-account-using-valid--and-invalid-credentials;;1"
+    },
+    {
+      "cells": [
+        "http://webdriveruniversity.com/Login-Portal/run.html",
+        "andreyivanov",
+        "198632",
+        "validation failed"
+      ],
+      "line": 11,
+      "id": "login-to-account;login-to-account-using-valid--and-invalid-credentials;;2"
+    },
+    {
+      "cells": [
+        "http://webdriveruniversity.com/Login-Portal/run.html",
+        "webdriver123",
+        "webdriver123",
+        "validation succeeded"
+      ],
+      "line": 12,
+      "id": "login-to-account;login-to-account-using-valid--and-invalid-credentials;;3"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 2181957530,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 11,
+  "name": "Login to account using valid  and invalid credentials",
+  "description": "",
+  "id": "login-to-account;login-to-account-using-valid--and-invalid-credentials;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 4,
+  "name": "User navigates to \"http://webdriveruniversity.com/Login-Portal/run.html\" login page",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 5,
+  "name": "User type \"andreyivanov\" username",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 6,
+  "name": "User type \"198632\" password",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 7,
+  "name": "User clicks on Login Button",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "User should be presented with \"validation failed\" message",
+  "matchedColumns": [
+    3
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://webdriveruniversity.com/Login-Portal/run.html",
+      "offset": 19
+    }
+  ],
+  "location": "LoginSteps.user_navigates_to_login_page(String)"
+});
+formatter.result({
+  "duration": 726099542,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "andreyivanov",
+      "offset": 11
+    }
+  ],
+  "location": "LoginSteps.user_type_username(String)"
+});
+formatter.result({
+  "duration": 321416666,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "198632",
+      "offset": 11
+    }
+  ],
+  "location": "LoginSteps.user_type_password(String)"
+});
+formatter.result({
+  "duration": 230316612,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginSteps.user_clicks_on_Login_Button()"
+});
+formatter.result({
+  "duration": 86192839,
+  "error_message": "java.lang.NullPointerException\n\tat pageObjects.Login_Page.clickLoginButton(Login_Page.java:42)\n\tat stepDifinitions.LoginSteps.user_clicks_on_Login_Button(LoginSteps.java:31)\n\tat ✽.When User clicks on Login Button(Login.feature:7)\n",
+  "status": "failed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "validation failed",
+      "offset": 31
+    }
+  ],
+  "location": "LoginSteps.user_should_be_presented_with_message(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded0.png");
+formatter.after({
+  "duration": 530191102,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1616118764,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 12,
+  "name": "Login to account using valid  and invalid credentials",
+  "description": "",
+  "id": "login-to-account;login-to-account-using-valid--and-invalid-credentials;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 4,
+  "name": "User navigates to \"http://webdriveruniversity.com/Login-Portal/run.html\" login page",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 5,
+  "name": "User type \"webdriver123\" username",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 6,
+  "name": "User type \"webdriver123\" password",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 7,
+  "name": "User clicks on Login Button",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "User should be presented with \"validation succeeded\" message",
+  "matchedColumns": [
+    3
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://webdriveruniversity.com/Login-Portal/run.html",
+      "offset": 19
+    }
+  ],
+  "location": "LoginSteps.user_navigates_to_login_page(String)"
+});
+formatter.result({
+  "duration": 687035787,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "webdriver123",
+      "offset": 11
+    }
+  ],
+  "location": "LoginSteps.user_type_username(String)"
+});
+formatter.result({
+  "duration": 366126685,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "webdriver123",
+      "offset": 11
+    }
+  ],
+  "location": "LoginSteps.user_type_password(String)"
+});
+formatter.result({
+  "duration": 268436848,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginSteps.user_clicks_on_Login_Button()"
+});
+formatter.result({
+  "duration": 103179402,
+  "error_message": "java.lang.NullPointerException\n\tat pageObjects.Login_Page.clickLoginButton(Login_Page.java:42)\n\tat stepDifinitions.LoginSteps.user_clicks_on_Login_Button(LoginSteps.java:31)\n\tat ✽.When User clicks on Login Button(Login.feature:7)\n",
+  "status": "failed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "validation succeeded",
+      "offset": 31
+    }
+  ],
+  "location": "LoginSteps.user_should_be_presented_with_message(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded1.png");
+formatter.after({
+  "duration": 541391777,
+  "status": "passed"
+});
+formatter.uri("contactUs.feature");
 formatter.feature({
   "line": 1,
   "name": "Submit user info usin Contact Us form",
@@ -7,7 +313,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 2463905797,
+  "duration": 1674907023,
   "status": "passed"
 });
 formatter.scenario({
@@ -76,179 +382,37 @@ formatter.match({
   "location": "ContactUsSteps.user_access_webdriveruniversity_Contact_us_form()"
 });
 formatter.result({
-  "duration": 742982751,
+  "duration": 874382280,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.user_enters_valid_user_name()"
 });
 formatter.result({
-  "duration": 311193374,
+  "duration": 326704785,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.user_enters_valid_last_name(DataTable)"
 });
 formatter.result({
-  "duration": 191585050,
+  "duration": 206115361,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.user_enters_valid_email_address()"
 });
 formatter.result({
-  "duration": 258099462,
+  "duration": 342438675,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.user_enters_comments(DataTable)"
 });
 formatter.result({
-  "duration": 187215251,
+  "duration": 208000629,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.user_clicks_on_Sumbit_button()"
-});
-formatter.result({
-  "duration": 908636714,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ContactUsSteps.the_information_should_successfully_be_submited()"
-});
-formatter.result({
-  "duration": 64027521,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 155692970,
-  "status": "passed"
-});
-formatter.uri("products.feature");
-formatter.feature({
-  "line": 1,
-  "name": "Products",
-  "description": "",
-  "id": "products",
-  "keyword": "Feature"
-});
-formatter.scenarioOutline({
-  "line": 3,
-  "name": "Validate promo code alert is visible when clicking on special offers link",
-  "description": "",
-  "id": "products;validate-promo-code-alert-is-visible-when-clicking-on-special-offers-link",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 4,
-  "name": "User navigates to \"\u003curl\u003e\" website",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 5,
-  "name": "User clicks on \"\u003cbutton\u003e\" button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 6,
-  "name": "User should be presented with promo alert",
-  "keyword": "Then "
-});
-formatter.examples({
-  "line": 8,
-  "name": "",
-  "description": "",
-  "id": "products;validate-promo-code-alert-is-visible-when-clicking-on-special-offers-link;",
-  "rows": [
-    {
-      "cells": [
-        "url",
-        "button"
-      ],
-      "line": 9,
-      "id": "products;validate-promo-code-alert-is-visible-when-clicking-on-special-offers-link;;1"
-    },
-    {
-      "cells": [
-        "http://webdriveruniversity.com/Page-Object-Model/products.html",
-        "#container-special-offers"
-      ],
-      "line": 10,
-      "id": "products;validate-promo-code-alert-is-visible-when-clicking-on-special-offers-link;;2"
-    }
-  ],
-  "keyword": "Examples"
-});
-formatter.before({
-  "duration": 1556689696,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 10,
-  "name": "Validate promo code alert is visible when clicking on special offers link",
-  "description": "",
-  "id": "products;validate-promo-code-alert-is-visible-when-clicking-on-special-offers-link;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 4,
-  "name": "User navigates to \"http://webdriveruniversity.com/Page-Object-Model/products.html\" website",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 5,
-  "name": "User clicks on \"#container-special-offers\" button",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 6,
-  "name": "User should be presented with promo alert",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "http://webdriveruniversity.com/Page-Object-Model/products.html",
-      "offset": 19
-    }
-  ],
-  "location": "ProductSteps.user_navigates_to_website(String)"
-});
-formatter.result({
-  "duration": 929103404,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "#container-special-offers",
-      "offset": 16
-    }
-  ],
-  "location": "ProductSteps.user_clicks_on_button(String)"
-});
-formatter.result({
-  "duration": 836428787,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ProductSteps.user_should_be_presented_with_promo_alert()"
-});
-formatter.result({
-  "duration": 1242385439,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 172152997,
-  "status": "passed"
-});
 });
