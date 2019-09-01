@@ -17,8 +17,8 @@ public class ProductSteps extends DriverFactory{
 
 	@Then("^User clicks on \"([^\"]*)\" button$")
 	public void user_clicks_on_button(String buttonLocator) throws InterruptedException{
-		basePage.WaitUntilWebElementIsVisibleUsingByLocator(By.cssSelector(buttonLocator));
-		getDriver().findElement(By.cssSelector(buttonLocator)).click();
+		basePage.WaitUntilWebElementIsVisibleUsingByLocator(By.id(buttonLocator));
+		getDriver().findElement(By.id(buttonLocator)).click();
 	}
 
 	@Then("^User should be presented with promo alert$")
