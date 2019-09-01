@@ -36,8 +36,12 @@ public class Login_Page extends BasePage {
 	}
 
 	public Login_Page clickLoginButton() throws Exception{
-		driver.findElement(By.xpath("//button[@id='login-button']")).click();
-		return null;
+		try {
+			driver.findElement(By.id("login-button")).click();
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getMessage());
+		}		
+		return new Login_Page();
 	}
 	
 	public Login_Page checkAlertMessage(String message) throws IOException {

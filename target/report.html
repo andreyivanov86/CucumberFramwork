@@ -33,8 +33,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
@@ -47,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Aug 31, 2019 12:11:40 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Sep 1, 2019 10:39:39 AM</span>
 				</a>
 			</li>
 			<li>
@@ -73,8 +72,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -125,10 +122,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -140,10 +137,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>2</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -155,10 +152,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='80%'><span class='strong'>16</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>20</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='10%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='10%'>2</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -172,21 +169,21 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Login to account</span>
-						<span class='test-time'>Aug 31, 2019 12:11:40 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Sep 1, 2019 10:39:39 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 0m 7s+700ms</span>
+<div class='scenariooutline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 0m 7s+750ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">Login to account using valid  and invalid credentials</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario fail' status='fail'>
+		<li test-id='3' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -205,21 +202,17 @@
 						<span class="bdd-step-name">And User type "198632" password</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='7' class='node when fail' status='fail'><b>When</b>
+					<li test-id='7' class='node when pass' status='pass'><b>When</b>
 						<span class="bdd-step-name">When User clicks on Login Button</span>
-							<div class='pre'><pre>java.lang.NullPointerException
-	at pageObjects.Login_Page.clickLoginButton(Login_Page.java:42)
-	at stepDifinitions.LoginSteps.user_clicks_on_Login_Button(LoginSteps.java:31)
-	at ✽.When User clicks on Login Button(Login.feature:7)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='8' class='node then skip' status='skip'><b>Then</b>
+					<li test-id='8' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then User should be presented with "validation failed" message</span>
-							<div class='pre'>skipped</div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='9' class='node scenario fail' status='fail'>
+		<li test-id='9' class='node scenario pass' status='pass'>
 			
 			<b>Scenario</b>
 			
@@ -231,24 +224,20 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='11' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User type "webdriver123" username</span>
+						<span class="bdd-step-name">And User type "webdriver" username</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='12' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And User type "webdriver123" password</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='13' class='node when fail' status='fail'><b>When</b>
+					<li test-id='13' class='node when pass' status='pass'><b>When</b>
 						<span class="bdd-step-name">When User clicks on Login Button</span>
-							<div class='pre'><pre>java.lang.NullPointerException
-	at pageObjects.Login_Page.clickLoginButton(Login_Page.java:42)
-	at stepDifinitions.LoginSteps.user_clicks_on_Login_Button(LoginSteps.java:31)
-	at ✽.When User clicks on Login Button(Login.feature:7)
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='14' class='node then skip' status='skip'><b>Then</b>
+					<li test-id='14' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then User should be presented with "validation succeeded" message</span>
-							<div class='pre'>skipped</div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
@@ -261,12 +250,12 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='15'>
 					<div class='test-heading'>
 						<span class='test-name'>Submit user info usin Contact Us form</span>
-						<span class='test-time'>Aug 31, 2019 12:11:48 PM</span>
+						<span class='test-time'>Sep 1, 2019 10:39:47 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenario node' test-id='16' status='pass'>
-	<span class='duration right label'>0h 0m 5s+371ms</span>
+	<span class='duration right label'>0h 0m 4s+350ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Submit valid user info via Contact Us fomr</span>
@@ -339,12 +328,12 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='24'>
 					<div class='test-heading'>
 						<span class='test-name'>Products</span>
-						<span class='test-time'>Aug 31, 2019 12:11:54 PM</span>
+						<span class='test-time'>Sep 1, 2019 10:39:52 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='25' status='pass'>
-	<span class='duration right label'>0h 0m 4s+448ms</span>
+	<span class='duration right label'>0h 0m 4s+101ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">Validate promo code alert is visible when clicking on special offers link</span>
@@ -401,80 +390,6 @@
 </div>
 <!-- test view -->
 <!-- category view -->
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.NullPointerException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Aug 31, 2019 12:11:44 PM</td>
-                                                        <td class='linked' test-id='7'>Login to account.Login to account using valid  and invalid credentials.Login to account using valid  and invalid credentials.When User clicks on Login Button</td>
-                                                        <td><pre><pre>java.lang.NullPointerException
-	at pageObjects.Login_Page.clickLoginButton(Login_Page.java:42)
-	at stepDifinitions.LoginSteps.user_clicks_on_Login_Button(LoginSteps.java:31)
-	at ✽.When User clicks on Login Button(Login.feature:7)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Aug 31, 2019 12:11:47 PM</td>
-                                                        <td class='linked' test-id='13'>Login to account.Login to account using valid  and invalid credentials.Login to account using valid  and invalid credentials.When User clicks on Login Button</td>
-                                                        <td><pre><pre>java.lang.NullPointerException
-	at pageObjects.Login_Page.clickLoginButton(Login_Page.java:42)
-	at stepDifinitions.LoginSteps.user_clicks_on_Login_Button(LoginSteps.java:31)
-	at ✽.When User clicks on Login Button(Login.feature:7)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -502,19 +417,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 31, 2019 12:11:40 PM</div>
+					<div class='panel-lead'>Sep 1, 2019 10:39:39 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 31, 2019 12:11:58 PM</div>
+			 		<div class='panel-lead'>Sep 1, 2019 10:39:56 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>18,434ms</div>
+					<div class='panel-lead'>16,982ms</div>
 				</div>
 			</div>
 		</div>
@@ -527,31 +442,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 2,
-				failParent: 1,
+				passParent: 3,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 2,
-				failChild: 2,
+				passChild: 4,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 2,
+				exceptionsChild: 0,
 				
-				passGrandChild: 16,
-				failGrandChild: 2,
+				passGrandChild: 20,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 2,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 4,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		

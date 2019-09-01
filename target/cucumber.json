@@ -1,0 +1,509 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3055163650,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.setup()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Login to account using valid  and invalid credentials",
+        "description": "",
+        "id": "login-to-account;login-to-account-using-valid--and-invalid-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 320905402,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.tearDownAndScreenShotOnFailure(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 806801947,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User navigates to \"http://webdriveruniversity.com/Login-Portal/run.html\" login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://webdriveruniversity.com/Login-Portal/run.html",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginSteps.user_navigates_to_login_page(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 322724157,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User type \"andreyivanov\" username",
+            "match": {
+              "arguments": [
+                {
+                  "val": "andreyivanov",
+                  "offset": 11
+                }
+              ],
+              "location": "LoginSteps.user_type_username(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 201142923,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User type \"198632\" password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "198632",
+                  "offset": 11
+                }
+              ],
+              "location": "LoginSteps.user_type_password(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 116074411,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User clicks on Login Button",
+            "match": {
+              "location": "LoginSteps.user_clicks_on_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 30030673,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be presented with \"validation failed\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "validation failed",
+                  "offset": 31
+                }
+              ],
+              "location": "LoginSteps.user_should_be_presented_with_message(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1438758922,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.setup()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Login to account using valid  and invalid credentials",
+        "description": "",
+        "id": "login-to-account;login-to-account-using-valid--and-invalid-credentials;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 301741996,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.tearDownAndScreenShotOnFailure(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 579477890,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User navigates to \"http://webdriveruniversity.com/Login-Portal/run.html\" login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://webdriveruniversity.com/Login-Portal/run.html",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginSteps.user_navigates_to_login_page(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 292443173,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User type \"webdriver\" username",
+            "match": {
+              "arguments": [
+                {
+                  "val": "webdriver",
+                  "offset": 11
+                }
+              ],
+              "location": "LoginSteps.user_type_username(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 228757225,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User type \"webdriver123\" password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "webdriver123",
+                  "offset": 11
+                }
+              ],
+              "location": "LoginSteps.user_type_password(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 100987015,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User clicks on Login Button",
+            "match": {
+              "location": "LoginSteps.user_clicks_on_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13519248,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be presented with \"validation succeeded\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "validation succeeded",
+                  "offset": 31
+                }
+              ],
+              "location": "LoginSteps.user_should_be_presented_with_message(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login to account",
+    "description": "",
+    "id": "login-to-account",
+    "keyword": "Feature",
+    "uri": "Login.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1341682330,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.setup()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Submit valid user info via Contact Us fomr",
+        "description": "",
+        "id": "submit-user-info-usin-contact-us-form;submit-valid-user-info-via-contact-us-fomr",
+        "after": [
+          {
+            "result": {
+              "duration": 172041190,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.tearDownAndScreenShotOnFailure(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 638578184,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User access webdriveruniversity Contact us form",
+            "match": {
+              "location": "ContactUsSteps.user_access_webdriveruniversity_Contact_us_form()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 378535085,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User enters valid user name",
+            "match": {
+              "location": "ContactUsSteps.user_enters_valid_user_name()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 178749632,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enters valid last name",
+            "match": {
+              "location": "ContactUsSteps.user_enters_valid_last_name(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Woods",
+                  "Jackson",
+                  "Jones"
+                ],
+                "line": 7
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 243205584,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User enters valid email address",
+            "match": {
+              "location": "ContactUsSteps.user_enters_valid_email_address()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 174395820,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User enters comments",
+            "match": {
+              "location": "ContactUsSteps.user_enters_comments(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "comment 1",
+                  "comment 2"
+                ],
+                "line": 10
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1309048692,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User clicks on Sumbit button",
+            "match": {
+              "location": "ContactUsSteps.user_clicks_on_Sumbit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 62330065,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the information should successfully be submited",
+            "match": {
+              "location": "ContactUsSteps.the_information_should_successfully_be_submited()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Submit user info usin Contact Us form",
+    "description": "",
+    "id": "submit-user-info-usin-contact-us-form",
+    "keyword": "Feature",
+    "uri": "contactUs.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1419988725,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.setup()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Validate promo code alert is visible when clicking on special offers link",
+        "description": "",
+        "id": "products;validate-promo-code-alert-is-visible-when-clicking-on-special-offers-link;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 178217083,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.tearDownAndScreenShotOnFailure(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 861836059,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User navigates to \"http://webdriveruniversity.com/Page-Object-Model/products.html\" website",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://webdriveruniversity.com/Page-Object-Model/products.html",
+                  "offset": 19
+                }
+              ],
+              "location": "ProductSteps.user_navigates_to_website(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 302516805,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User clicks on \"#container-special-offers\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "#container-special-offers",
+                  "offset": 16
+                }
+              ],
+              "location": "ProductSteps.user_clicks_on_button(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1506194502,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User should be presented with promo alert",
+            "match": {
+              "location": "ProductSteps.user_should_be_presented_with_promo_alert()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Products",
+    "description": "",
+    "id": "products",
+    "keyword": "Feature",
+    "uri": "products.feature"
+  }
+]
