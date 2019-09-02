@@ -14,6 +14,7 @@ import pageObjects.BasePage;
 import pageObjects.ContactUs_Page;
 import pageObjects.Login_Page;
 import pageObjects.Products_Page;
+import pageObjects.TodoList_Page;
 
 public class DriverFactory {
 	
@@ -23,6 +24,7 @@ public class DriverFactory {
 	public static ContactUs_Page contactusPage;
 	public static Products_Page productsPage;
 	public static Login_Page loginPage;
+	public static TodoList_Page todoList;
 
 	public WebDriver getDriver() {
 		
@@ -72,6 +74,7 @@ public class DriverFactory {
 			productsPage = PageFactory.initElements(driver, Products_Page.class);
 			basePage = PageFactory.initElements(driver, BasePage.class);
 			loginPage = PageFactory.initElements(driver, Login_Page.class);
+			todoList = PageFactory.initElements(driver, TodoList_Page.class);
 		}
 		return driver;
 	
