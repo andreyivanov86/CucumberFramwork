@@ -46,4 +46,19 @@ public class ToDoListSteps extends DriverFactory {
 		todoList.checkNewItem(data.get(0).get(0));
 		todoList.checkNewItem(data.get(0).get(1));		
 	}
+	
+	@When("^User clicks on item it gets cheked completed$")
+	public void user_clicks_on_item_it_gets_cheked_completed(DataTable newItems) throws Throwable {
+		List<List<String>> data = newItems.raw();
+		todoList.completeItem(data.get(0).get(0));
+		Thread.sleep(2000);
+		todoList.completeItem(data.get(0).get(1));
+		Thread.sleep(2000);
+	}
+
+	@When("^User hovers over item he can delete the item$")
+	public void user_hovers_over_item_he_can_delete_the_item(DataTable newItems) throws Throwable {
+		List<List<String>> data = newItems.raw();
+		todoList.deleteItem(data.get(0).get(0));
+	}
 }

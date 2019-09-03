@@ -12,9 +12,13 @@ Scenario Outline: Add new itme to To-Do list
 	|Stroke a cat|
 	|Walk a dog|
 	
-Scenario: Add several new items in the list
+Scenario: Add several new items in the list, check the item completed, and delete the item
 	And User enters item name to the Add new todo field 
-	|Wash Dishes|Stroke Cat|Walk dog|
+	|Wash Dishes|Stroke Cat|
 	When User press Enter
 	Then Check if items in the list
-	|Wash Dishes|Stroke Cat|Walk dog|
+	|Wash Dishes|Stroke Cat|
+	When User clicks on item it gets cheked completed
+	|Wash Dishes|Stroke Cat|
+	When User hovers over item he can delete the item
+	|Wash Dishes|Stroke Cat|
