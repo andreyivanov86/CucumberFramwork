@@ -21,7 +21,6 @@ public class ToDoListSteps extends DriverFactory {
 	@When("^User press Enter$")
 	public void user_press_Enter() throws Throwable {
 		todoList.pressEnter();
-		Thread.sleep(2000);
 	}
 
 	@Then("^New Todo item \"([^\"]*)\" should be added to the list$")

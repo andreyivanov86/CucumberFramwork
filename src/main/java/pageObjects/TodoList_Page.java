@@ -3,6 +3,7 @@ package pageObjects;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -29,13 +30,17 @@ public class TodoList_Page extends BasePage{
 	}
 	
 	public TodoList_Page checkNewItem(String newItem) throws Exception {
-		basePage.WaitUntilWebElementIsVisible(add_new_todo);
-		WebElement lastListItem = driver.findElement(By.xpath("//li[contains(text(),'" + newItem + "')]"));
-		System.out.println("Last item in the list: " + lastListItem.getText());
-		System.out.println("New Item name: " + newItem);
 		
-		assertEquals(newItem, lastListItem.getText());
+//		WebElement listItem = driver.findElement(By.xpath("//li[contains(text(),'" + newItem + "')]"));
+//		assertEquals(newItem, listItem.getText());
 		
+		List<WebElement> itemList = driver.findElements(By.xpath("//div[@id='container']//ul/li"));
+		
+		for (WebElement item : itemList) {
+			if (item.getText()==newItem) {
+				assertEquals(newItem, item.getText());
+			}
+		}
 		return new TodoList_Page();
 	}
 

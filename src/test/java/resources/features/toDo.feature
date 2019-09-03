@@ -8,4 +8,4 @@ Scenario Outline: Add new itme to To-Do list
 	Examples: 
 	|url												 |item_name |
 	|http://webdriveruniversity.com/To-Do-List/index.html|Do dishes |
-	|http://webdriveruniversity.com/To-Do-List/index.html|Stroke Cat|
+	|http://webdriveruniversity.com/To-Do-List/index.html|Stroke a cat|
