@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 
+import pageObjects.Accordition_Page;
 import pageObjects.BasePage;
 import pageObjects.ContactUs_Page;
 import pageObjects.Login_Page;
@@ -25,6 +26,7 @@ public class DriverFactory {
 	public static Products_Page productsPage;
 	public static Login_Page loginPage;
 	public static TodoList_Page todoList;
+	public static Accordition_Page accorditionPage;
 
 	public WebDriver getDriver() {
 		
@@ -75,6 +77,8 @@ public class DriverFactory {
 			basePage = PageFactory.initElements(driver, BasePage.class);
 			loginPage = PageFactory.initElements(driver, Login_Page.class);
 			todoList = PageFactory.initElements(driver, TodoList_Page.class);
+			accorditionPage = PageFactory.initElements(driver, Accordition_Page.class);
+			
 		}
 		return driver;
 	
