@@ -1,9 +1,12 @@
 package stepDifinitions;
 
+import java.util.List;
+
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import utils.DriverFactory;
 
 public class AccorditionSteps extends DriverFactory{
@@ -18,14 +21,22 @@ public class AccorditionSteps extends DriverFactory{
 		accorditionPage.waitPageLoaded();
 	}
 
-	@Then("^User clicks on each button to show hidden text$")
-	public void user_clicks_on_each_button_to_show_hidden_text(DataTable buttons) throws Throwable {
-	   
+	@When("^User clicks on each button to show hidden text$")
+	public void user_clicks_on_each_button_to_show_hidden_text(DataTable data) throws Throwable {
+		List<List<String>> buttons = data.raw();
+		accorditionPage.clickOnElement(buttons.get(0).get(0));
+		accorditionPage.clickOnElement(buttons.get(0).get(1));
+		accorditionPage.clickOnElement(buttons.get(0).get(2));
+		accorditionPage.clickOnElement(buttons.get(0).get(3));
 	}
 
-	@Then("^User clicks on each button to hide text$")
-	public void user_clicks_on_each_button_to_hide_text(DataTable divs) throws Throwable {
-	
+	@Then("^Check if hidden text is visible$")
+	public void check_if_hidden_text_is_visible(DataTable data) throws Throwable {
+		List<List<String>> textId = data.raw();
+		accorditionPage.checkTextIsVisible(textId.get(0).get(0));
+		accorditionPage.checkTextIsVisible(textId.get(0).get(1));
+		accorditionPage.checkTextIsVisible(textId.get(0).get(2));
+		accorditionPage.checkTextIsVisible(textId.get(0).get(3));
 	}
 	
 }

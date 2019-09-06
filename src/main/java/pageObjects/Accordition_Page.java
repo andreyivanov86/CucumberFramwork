@@ -1,5 +1,6 @@
 package pageObjects;
 
+import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
@@ -14,7 +15,7 @@ public class Accordition_Page extends BasePage{
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	By pageLoaded = By.xpath("//p[@id='hidden-text' and contains(text(), 'LOADING COMPLETE.')]");
-//	public @FindBy(xpath = "//p[@id='hidden-text' and contains(text(), 'LOADING COMPLETE.')]") WebElement pageLoaded;
+	public @FindBy(xpath = "//p[@id='hidden-text' and contains(text(), 'LOADING COMPLETE.')]") WebElement loadedPage;	
 	
 	public Accordition_Page() throws IOException {
 		super();
@@ -24,7 +25,7 @@ public class Accordition_Page extends BasePage{
 		
 		try {
 			wait.until(ExpectedConditions.presenceOfElementLocated(pageLoaded));
-			assertEquals("LOADING COMPLETE.", driver.findElement(By.xpath("//p[@id='hidden-text' and contains(text(), 'LOADING COMPLETE.')]")).getText());
+			assertEquals("LOADING COMPLETE.", loadedPage.getText());
 			
 		} catch (Exception e) {
 			System.out.println("Unable to located element: " + e.getMessage());
@@ -34,7 +35,26 @@ public class Accordition_Page extends BasePage{
 	}
 	
 	public Accordition_Page clickOnElement(String id) throws IOException{
-		driver.findElement(By.id(id)).click();
+		
+		try {
+			driver.findElement(By.id(id)).click();
+			System.out.println("Element " + id + "is clickable");
+		} catch (Exception e) {
+			System.out.println("Unable to click element : " + e.getMessage());
+		}
+		
+		return new Accordition_Page();
+	}
+	
+	public Accordition_Page checkTextIsVisible(String id) throws IOException {
+		
+		try {
+			assertTrue(driver.findElement(By.id(id)).isDisplayed());
+			System.out.println("Element " + id + "is visible");
+		} catch (Exception e) {
+			System.out.println("Unable to click element : " + e.getMessage());
+		}
+		
 		return new Accordition_Page();
 	}
 }
