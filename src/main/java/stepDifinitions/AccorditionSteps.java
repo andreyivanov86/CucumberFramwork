@@ -28,6 +28,7 @@ public class AccorditionSteps extends DriverFactory{
 		accorditionPage.clickOnElement(buttons.get(0).get(1));
 		accorditionPage.clickOnElement(buttons.get(0).get(2));
 		accorditionPage.clickOnElement(buttons.get(0).get(3));
+		Thread.sleep(1000);
 	}
 
 	@Then("^Check if hidden text is visible$")

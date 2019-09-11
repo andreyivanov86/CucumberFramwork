@@ -6,4 +6,4 @@ Scenario: Wait untill all elements on the page are loaded and the click each one
 	When User clicks on each button to show hidden text
 	|manual-testing-accordion|cucumber-accordion|automation-accordion|click-accordion|
 	Then Check if hidden text is visible
-	|manual-testing-description|cucumber-testing-description|automation-testing-description|click-accordion|
+	|manual-testing-description|cucumber-testing-description|automation-testing-description|timeout|

@@ -13,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import pageObjects.Accordition_Page;
 import pageObjects.BasePage;
 import pageObjects.ContactUs_Page;
+import pageObjects.DropCheckRadio_Page;
 import pageObjects.Login_Page;
 import pageObjects.Products_Page;
 import pageObjects.TodoList_Page;
@@ -27,6 +28,7 @@ public class DriverFactory {
 	public static Login_Page loginPage;
 	public static TodoList_Page todoList;
 	public static Accordition_Page accorditionPage;
+	public static DropCheckRadio_Page dropCheckRadio;
 
 	public WebDriver getDriver() {
 		
@@ -78,6 +80,7 @@ public class DriverFactory {
 			loginPage = PageFactory.initElements(driver, Login_Page.class);
 			todoList = PageFactory.initElements(driver, TodoList_Page.class);
 			accorditionPage = PageFactory.initElements(driver, Accordition_Page.class);
+			dropCheckRadio = PageFactory.initElements(driver, DropCheckRadio_Page.class);
 			
 		}
 		return driver;

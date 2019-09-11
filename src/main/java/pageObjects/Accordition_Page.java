@@ -15,7 +15,8 @@ public class Accordition_Page extends BasePage{
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	By pageLoaded = By.xpath("//p[@id='hidden-text' and contains(text(), 'LOADING COMPLETE.')]");
-	public @FindBy(xpath = "//p[@id='hidden-text' and contains(text(), 'LOADING COMPLETE.')]") WebElement loadedPage;	
+	public @FindBy(xpath = "//p[@id='hidden-text' and contains(text(), 'LOADING COMPLETE.')]") WebElement loadedPage;
+//	public @FindBy(xpath = "//p[@id='timeout' and contains(text(), '')]") WebElement loadedPage;
 	
 	public Accordition_Page() throws IOException {
 		super();
@@ -38,7 +39,6 @@ public class Accordition_Page extends BasePage{
 		
 		try {
 			driver.findElement(By.id(id)).click();
-			System.out.println("Element " + id + "is clickable");
 		} catch (Exception e) {
 			System.out.println("Unable to click element : " + e.getMessage());
 		}
@@ -50,9 +50,8 @@ public class Accordition_Page extends BasePage{
 		
 		try {
 			assertTrue(driver.findElement(By.id(id)).isDisplayed());
-			System.out.println("Element " + id + "is visible");
 		} catch (Exception e) {
-			System.out.println("Unable to click element : " + e.getMessage());
+			System.out.println("Element is not visible : " + e.getMessage());
 		}
 		
 		return new Accordition_Page();
