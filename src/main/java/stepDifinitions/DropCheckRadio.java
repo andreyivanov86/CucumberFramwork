@@ -1,5 +1,6 @@
 package stepDifinitions;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -12,19 +13,17 @@ public class DropCheckRadio extends DriverFactory{
 		dropCheckRadio.getDropCheckRadioPage();
 	}
 
-	@Given("^User clicks on the \"([^\"]*)\" DropDown menu$")
-	public void user_clicks_on_the_DropDown_menu(String dropDown_id) throws Throwable {
-		dropCheckRadio.clickOnDropDownMenu(dropDown_id);
+	@When("^User select item from drop down menu$")
+	public void user_select_item_from_drop_down_menu(DataTable data) throws Throwable {
+		dropCheckRadio.selectItemFromList(data, 0, 0, "JAVA");
+		dropCheckRadio.selectItemFromList(data, 0, 1, "JUnit");
+		dropCheckRadio.selectItemFromList(data, 0, 2, "HTML");
 	}
 
-	@When("^User clicks on \"([^\"]*)\" item$")
-	public void user_clicks_on_item(String menu_item) throws Throwable {
-		dropCheckRadio.selectItemFromList(menu_item);
-	}
-	
 	@Then("^Item should be selected$")
 	public void item_should_be_selected() throws Throwable {
-	   
+
 	}
+
 
 }
