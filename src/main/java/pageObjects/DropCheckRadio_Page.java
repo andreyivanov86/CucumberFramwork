@@ -43,5 +43,19 @@ public class DropCheckRadio_Page extends BasePage{
 		
 		return new DropCheckRadio_Page();
 	}
-
+	
+	//Click on radio button
+	public DropCheckRadio_Page clickRadioButton (DataTable data, int row, int col) throws Exception {
+		List<List<String>> radioButtons = data.raw();
+		String radioButtonElement = radioButtons.get(row).get(col);
+		WebElement radioButton = driver.findElement(By.xpath("//form[@id='radio-buttons']//input[@value='" + radioButtonElement + "'][not(@disabled)]"));			
+		
+		try {
+			radioButton.click();
+		} catch (Exception e) {
+			System.out.println("Unable to click radio button " + e.getMessage());
+		}	
+		
+		return new DropCheckRadio_Page();
+	}
 }

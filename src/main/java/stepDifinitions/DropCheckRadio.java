@@ -3,8 +3,6 @@ package stepDifinitions;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import utils.DriverFactory;
 
 public class DropCheckRadio extends DriverFactory{
@@ -29,5 +27,11 @@ public class DropCheckRadio extends DriverFactory{
 		dropCheckRadio.checkCheckbox(data, 0, 2);
 		dropCheckRadio.checkCheckbox(data, 0, 3);
 	}
+	
+	@And("^user clicks on radio buttons$")
+	public void user_clicks_on_radio_buttons(DataTable data) throws Throwable {
+		dropCheckRadio.clickRadioButton(data, 0, 1);
+		dropCheckRadio.clickRadioButton(data, 0, 2);
 
+	}
 }

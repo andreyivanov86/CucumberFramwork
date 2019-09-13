@@ -10,4 +10,7 @@ Scenario: Select Items from dropdown list
 	|dropdowm-menu-1|dropdowm-menu-2|dropdowm-menu-3|
 	And User checks check boxes
 	|Option 1|Option 2|Option 3|Option 4|
-
+	And user clicks on radio buttons 
+	|green|blue|yellow|orange|purple|
+	
+	
