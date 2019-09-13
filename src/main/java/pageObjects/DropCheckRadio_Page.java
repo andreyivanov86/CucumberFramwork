@@ -21,21 +21,27 @@ public class DropCheckRadio_Page extends BasePage{
 		getDriver().get("http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
 		return new DropCheckRadio_Page();
 	}
-	
+	// DropDown Menu methods
 	public DropCheckRadio_Page selectItemFromList(DataTable data, int row, int column, String item) throws Exception {
 		List<List<String>> dropDownElements = data.raw();
 		WebElement dropDownElement = driver.findElement(By.id(dropDownElements.get(row).get(column)));
 		basePage.clickOnTextFromDropdownList(dropDownElement, item);
-		Thread.sleep(1000);
 		
 		return new DropCheckRadio_Page();
 	}
 	
-	public DropCheckRadio_Page checkSelectedItem(String item) throws Exception {
+	// Checkboxes methods
+	public DropCheckRadio_Page checkCheckbox(DataTable data, int row, int col) throws Exception {
+		List<List<String>> checkboxes = data.raw();
+		WebElement checkbox = driver.findElement(By.xpath("//label[contains(text(),'" + checkboxes.get(row).get(col) +"')]"));		
+			if (!checkbox.isSelected()) {
+				checkbox.click();
+				System.out.println("Checkbox " + checkboxes.get(row).get(col) + " successfuly clicked.");
+			} else if (checkbox.isSelected()) {
+				System.out.println("Checkbox " + checkboxes.get(row).get(col) + " is already selected.");
+			}
 		
 		return new DropCheckRadio_Page();
 	}
-	
-	
 
 }
