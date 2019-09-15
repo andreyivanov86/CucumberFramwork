@@ -11,6 +11,9 @@ Scenario: Select Items from dropdown list
 	And User checks check boxes
 	|Option 1|Option 2|Option 3|Option 4|
 	And user clicks on radio buttons 
-	|green|blue|yellow|orange|purple|
-	
+	|green  |blue   |yellow |orange|purple|
+	And User clicks on Selected and disabled Radio buttons 
+	|lettuce|cabbage|pumpkin|
+	And User selects enabled and not selected item from dropdown list 
+	|apple|orange|pear|grape|
 	
