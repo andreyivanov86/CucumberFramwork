@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 
 import pageObjects.Accordition_Page;
+import pageObjects.AjaxWait_Page;
 import pageObjects.BasePage;
 import pageObjects.ContactUs_Page;
 import pageObjects.DropCheckRadio_Page;
@@ -29,6 +30,7 @@ public class DriverFactory {
 	public static TodoList_Page todoList;
 	public static Accordition_Page accorditionPage;
 	public static DropCheckRadio_Page dropCheckRadio;
+	public static AjaxWait_Page ajaxWait;
 
 	public WebDriver getDriver() {
 		
@@ -81,6 +83,7 @@ public class DriverFactory {
 			todoList = PageFactory.initElements(driver, TodoList_Page.class);
 			accorditionPage = PageFactory.initElements(driver, Accordition_Page.class);
 			dropCheckRadio = PageFactory.initElements(driver, DropCheckRadio_Page.class);
+			ajaxWait = PageFactory.initElements(driver, AjaxWait_Page.class);
 			
 		}
 		return driver;

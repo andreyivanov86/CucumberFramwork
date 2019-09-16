@@ -1,6 +1,7 @@
 Feature: Select item from Drop Down menu
 	Select options in Checkbox list
 	Select Radio buttons
+	Handle disabled elements
 	
 Background: 
 	Given User opens webdriveruniversity DropDown, CheckBox, RadioButtons section

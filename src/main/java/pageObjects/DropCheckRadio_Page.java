@@ -57,9 +57,6 @@ public class DropCheckRadio_Page extends BasePage{
 		String checkbox = checkboxes.get(row).get(col);
 		WebElement checkboxElement = driver.findElement(By.xpath("//label[contains(text(),'" + checkboxes.get(row).get(col) +"')]"));		
 		
-		System.out.println(checkbox + " Is enabled: " + checkboxElement.isEnabled() + " Is checked: " + checkboxElement.getAttribute("checked"));
-		
-		
 		if (checkboxElement.getAttribute("checked") == null) {
 			checkboxElement.click();
 				System.out.println("Checkbox " + checkbox + " successfuly clicked.");
