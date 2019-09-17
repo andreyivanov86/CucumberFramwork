@@ -51,9 +51,8 @@ public class ToDoListSteps extends DriverFactory {
 	public void user_clicks_on_item_it_gets_cheked_completed(DataTable newItems) throws Throwable {
 		List<List<String>> data = newItems.raw();
 		todoList.completeItem(data.get(0).get(0));
-		Thread.sleep(2000);
 		todoList.completeItem(data.get(0).get(1));
-		Thread.sleep(2000);
+
 	}
 
 	@When("^User hovers over item he can delete the item$")

@@ -57,7 +57,6 @@ public class TodoList_Page extends BasePage{
 		try {
 			builder.moveToElement(itemElement).click();
 			builder.perform();
-			Thread.sleep(2000);
 			System.out.println("Item deleted seccessfully");
 		} catch (Exception e) {
 			System.out.println("Unable to click on delete element: " + e.getMessage());
