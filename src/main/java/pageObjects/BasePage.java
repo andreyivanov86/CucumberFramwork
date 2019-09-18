@@ -350,4 +350,14 @@ public class BasePage extends DriverFactory {
 	}
 	/**********************************************************************************/
 	/**********************************************************************************/
+	
+	/**********************************************************************************
+	 **CONVERT from RGB to HEX format
+	 **********************************************************************************/
+	public String fromRGBtoHEX(String color) {
+		String color_hex[];  
+		color_hex = color.replace("rgba(", "").split(",");       
+		String actual_hex = String.format("#%02x%02x%02x", Integer.parseInt(color_hex[0].trim()), Integer.parseInt(color_hex[1].trim()), Integer.parseInt(color_hex[2].trim()));  
+		return actual_hex;
+	}
 }
